@@ -113,6 +113,13 @@ header,.footer{flex-shrink:0}
   height: 100%;
   object-fit: contain;
 }
+.space-timer-host-screenshot {
+  background: linear-gradient(#27282b 10%, #24262b 80%);
+}
+.tool-card figure .space-timer-host-screenshot,
+.app-screens.is-enhanced .space-timer-host-screenshot:not([hidden]) {
+  object-fit: fill;
+}
 .app-screens-controls:not([hidden]) {
   display: flex;
   flex-wrap: wrap;
