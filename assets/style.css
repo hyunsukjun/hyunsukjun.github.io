@@ -134,6 +134,34 @@
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .home-hero{min-height:0;padding:44px 0 38px}
 .home-hero .sound-art{position:static;display:block;width:100%;height:auto;object-fit:contain;opacity:1}
+.home-hero .resonance-layers {
+  display: grid;
+  overflow: hidden;
+}
+.resonance-layers img {
+  display: block;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: auto;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .resonance-layers img {
+    animation: resonance-flow 6.55s ease-in-out;
+  }
+  .resonance-layers img:nth-child(2) {
+    animation-delay: 160ms;
+    --resonance-shift: .82%;
+  }
+  .resonance-layers img:nth-child(3) {
+    animation-delay: 320ms;
+    --resonance-shift: .6%;
+  }
+  @keyframes resonance-flow {
+    0%, 100% { transform: none; }
+    38% { transform: translateX(var(--resonance-shift, 1.05%)) scale(1.025, 1.014); }
+    72% { transform: translateX(-.22%) scale(1.006, .996); }
+  }
+}
 @media(max-width:600px){.home-hero{padding:34px 0 30px}}
 
 .directory{margin-bottom:56px}
