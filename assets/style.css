@@ -253,11 +253,9 @@ header,.footer{flex-shrink:0}
 .hub-detail-figure {
   margin-top: 22px;
 }
-.hub-chain-copy {
-  max-width: 68ch;
-}
+.hub-chain-copy,
 .hub-chain-figure {
-  max-width: 728px;
+  max-width: 68ch;
 }
 .hub-detail-figure a,
 .hub-detail-figure img {
