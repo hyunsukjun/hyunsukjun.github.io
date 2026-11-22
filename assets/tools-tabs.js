@@ -42,5 +42,6 @@ tabs.forEach((tab, index) => {
   });
 });
 
-showCategory(0);
+const linkedPanel = panels.findIndex(panel => window.location.hash === `#${panel.id}`);
+showCategory(Math.max(0, linkedPanel));
 tabList.hidden = false;
