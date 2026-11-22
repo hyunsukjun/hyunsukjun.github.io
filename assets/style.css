@@ -301,24 +301,40 @@ header,.footer{flex-shrink:0}
 }
 .hub-gallery-controls:not([hidden]) {
   gap: 0 10px;
+  align-items: center;
 }
-.hub-gallery-arrows {
-  display: flex;
+.hub-gallery-tip {
   margin-left: auto;
 }
-.hub-gallery-arrows button {
-  min-width: 44px;
+.hub-gallery-preview {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+.hub-gallery-preview:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 .hub-gallery-controls:not([hidden]) ~ .hub-detail-figure {
   margin-top: 0;
 }
-.hub-gallery .hub-detail-figure a {
+.hub-gallery-frame:not([hidden]),
+.hub-gallery-preview:not([hidden]) {
+  display: block;
   aspect-ratio: 1183 / 450;
   background: #303239;
 }
-.hub-gallery .hub-detail-figure img {
+.hub-gallery-frame img,
+.hub-gallery-preview img {
+  display: block;
+  width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.hub-gallery .caption a {
+  display: inline;
+  white-space: nowrap;
 }
 @media (max-width: 600px) {
   .hub-lab-grid {
