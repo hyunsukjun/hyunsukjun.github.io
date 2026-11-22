@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CurveLab Hub · Hyunsuk Jun</title><meta name="description" content="A browser workspace for exploring and processing sound." ><meta property="og:title" content="CurveLab Hub · Hyunsuk Jun"><meta property="og:description" content="A browser workspace for exploring and processing sound."><meta property="og:type" content="website"><link rel="canonical" href="https://hyunsukjun.github.io/tools/curvelab-hub/"><meta property="og:url" content="https://hyunsukjun.github.io/tools/curvelab-hub/"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/style.css?v=20261114-compact-tools"></head><body><a class="skip" href="#main">Skip to content</a><div class="wrap"><header><a class="brand" href="../../index.html">Hyunsuk Jun</a><nav aria-label="Main navigation"><a href="../../about/index.html">About</a></nav></header><main id="main">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CurveLab Hub · Hyunsuk Jun</title><meta name="description" content="A browser workspace for exploring and processing sound." ><meta property="og:title" content="CurveLab Hub · Hyunsuk Jun"><meta property="og:description" content="A browser workspace for exploring and processing sound."><meta property="og:type" content="website"><link rel="canonical" href="https://hyunsukjun.github.io/tools/curvelab-hub/"><meta property="og:url" content="https://hyunsukjun.github.io/tools/curvelab-hub/"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/style.css?v=20261122-curvelab-details"></head><body><a class="skip" href="#main">Skip to content</a><div class="wrap"><header><a class="brand" href="../../index.html">Hyunsuk Jun</a><nav aria-label="Main navigation"><a href="../../about/index.html">About</a></nav></header><main id="main">
 <div class="page-title">
   <a class="back" href="../index.html">← Tools</a>
   <h1>CurveLab Hub</h1>
@@ -11,14 +11,56 @@
   </div>
   <img src="../../assets/curvelab-hub-workspace.jpg" width="1280" height="720" alt="CurveLab Hub showing six Lab tabs, a source waveform, and the Audio speed curve editor.">
 </div>
-<div class="app-roles">
-  <article>
-    <h2>Six Labs</h2>
-    <p>Audio, Timbre, Space, Granular, Spectral, and Oscillator each offer a different way to work with sound.</p>
-  </article>
-  <article>
-    <h2>Sound Chain</h2>
-    <p>Build a chain of processing stages, revisit earlier results during the session, and download the result as a WAV file.</p>
-  </article>
-</div>
+<section class="hub-section" aria-labelledby="hub-labs-title">
+  <h2 id="hub-labs-title">Six Labs</h2>
+  <div class="hub-lab-grid">
+    <article>
+      <h3>Audio</h3>
+      <p>Draw separate curves for playback speed, pitch, and stereo pan. Slow down a phrase, reverse it, or hold the source at a single point.</p>
+    </article>
+    <article>
+      <h3>Timbre</h3>
+      <p>Arrange filters, chorus, flanger, and delay in a chain. Draw curves to sweep a filter cutoff or change how an echo repeats over time.</p>
+    </article>
+    <article>
+      <h3>Space</h3>
+      <p>Draw direction and distance curves to move sound around a speaker layout. Add reverb by drawing its amount over time and setting the decay. Export stereo, 4-channel, or 8-channel WAV files.</p>
+    </article>
+    <article>
+      <h3>Granular</h3>
+      <p>Build textures from short grains of recorded sound. Shape their source position, size, density, spread, and pitch range with curves. Export stereo, 4-channel, or 8-channel WAV files.</p>
+    </article>
+    <article>
+      <h3>Spectral</h3>
+      <p>Shift frequencies and stretch their spacing. Use Blur to soften spectral detail, shape harmonic relationships with Harmonicity, or hold a spectral state with Freeze.</p>
+    </article>
+    <article>
+      <h3>Oscillator</h3>
+      <p>Generate tones with curves for base frequency, frequency spread, and spectral slope, or resynthesize a recording from its partials. An impulse-response file can shape the generated sound.</p>
+    </article>
+  </div>
+  <p class="small muted hub-format-note">For Space and Granular, browser playback and the next Lab use a stereo mix of the result.</p>
+  <figure class="hub-detail-figure">
+    <a href="../../assets/curvelab-hub-space-reverb.jpg">
+      <img src="../../assets/curvelab-hub-space-reverb.jpg" width="1183" height="399" loading="lazy" alt="Open a larger view of the Space editor showing a drawn Reverb Amount curve, its Decay control, and the Octo 8ch speaker layout.">
+    </a>
+    <figcaption class="caption">Space with a Reverb Amount curve and Octo 8ch WAV output selected.</figcaption>
+  </figure>
+</section>
+
+<section class="hub-section" aria-labelledby="hub-chain-title">
+  <h2 id="hub-chain-title">Sound Chain</h2>
+  <div class="hub-chain-copy">
+    <p>Shape a sound in one Lab, then switch to another. Hub saves the changed processing as a stage and passes its result to the next Lab. Choose <strong>Use Output as Input</strong> to process the result again in the same Lab.</p>
+    <p>Select an earlier stage to reopen its input and settings. Editing that stage creates a new branch from the same input, so you can keep both versions.</p>
+    <p>For example, slow down a recording in Audio, then add a reverb curve in Space and prepare an 8-channel WAV. Continue building a texture from its stereo mix in Granular. You can return to the Space stage and download its 8-channel output.</p>
+    <p>Sound Chain history lasts until you close or reload the tab. Use <strong>Download WAV</strong> to keep a 24-bit audio file.</p>
+  </div>
+  <figure class="hub-detail-figure hub-chain-figure">
+    <a href="../../assets/curvelab-hub-sound-chain.jpg">
+      <img src="../../assets/curvelab-hub-sound-chain.jpg" width="728" height="114" loading="lazy" alt="Open a larger view of the Sound Chain showing Bach Prelude, a saved Audio stage, and a saved 8-channel Space stage feeding Granular.">
+    </a>
+    <figcaption class="caption">Audio and Space appear as saved stages. Granular uses the Space output as its input.</figcaption>
+  </figure>
+</section>
 </main><footer class="footer"><div class="footer-links"><a href="../../support/index.html">App Support</a><a href="../../privacy/index.html">Privacy</a><a href="../../about/index.html#contact">Contact</a></div></footer></div></body></html>
